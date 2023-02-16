@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import {Routes, Route, Link } from "react-router-dom";
 import BuscarPoke from './Components/BuscarPoke';
+import ListaPoke from './Components/ListaPoke';
+import VerPoke from './Components/VerPoke'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,23 +10,6 @@ function App() {
   return (
     
     <div className="App">
-      {/* <Routes>
-        <Route path="./Components/BuscarPoke" element={ <Buscar /> } />
-        <Route path="./Components/FiltrarPoke" element={ <Filtrar /> } />
-      </Routes> */}
-
-{/* <Router>
-      <Navbar />
-      <Switch>
-      <Route exact path="/" component={App} />
-        <Route exact path="./Components/BuscarPoke" component={BuscarPoke} />
-        <Route exact path="./Components/FiltrarPoke.jsx" component={BuscarPoke} />
-        <Route exact path="*" component={BuscarPoke} />
-      </Switch>
-    </Router> */}
-
-
-
       <header>
         <h1>Bienvenido</h1>
         <div>
@@ -37,8 +21,6 @@ function App() {
             <li>Buscar un Pokemon 🔎</li>
             <li>Filtrar un Pokemon por Elemento 🕵️</li>
           </ul>
-
-
         </div>
       </header>
       <br />
@@ -47,17 +29,16 @@ function App() {
       <br />
 
       <BuscarPoke/>
+
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <ListaPoke/>
+      
     </div>
   )
 }
-
-// function Navbar (){
-//   return (
-//     <nav>
-//           <Link to="./Components/BuscarPoke" target={'_blank'}>Aqui</Link>
-//     </nav>
-//   )
-
-// }
 
 export default App;

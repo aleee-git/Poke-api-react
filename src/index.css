@@ -105,8 +105,35 @@ hr { border: solid var(--azul);}
 /* BUSCAR */
 
 
+/* VER */
 
+.lista {
+  background-color: var(--azulClaro);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  border: 1px solid var(--azulOscuro);
+  padding: 50px;
+  max-width: 60%;
+}
 
+.texto {
+  font-family: var(--fuente);
+  font-weight: 400;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.titulo {
+  color: black;
+  font-family: var(--fuente);
+  font-weight: 600;
+}
+
+.imagen {
+  max-height: 70px;
+}
+/* VER */
 
 
 
