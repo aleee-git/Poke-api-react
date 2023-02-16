@@ -44,25 +44,18 @@ export default class BuscarPoke extends Component {
             console.log(name);
         }
 
-
-
   render() {
     return (
-      <div>
-        <div className="card text-center container" style={{width: "600px", backgroundColor:"#FFF0F0", alignItems:"center"}}>
-        <div className="card-header" style={{width: "100%"}}>Formulario para gays</div>
-        <div className="card-body">
+        <div className="card container" >
           <form onSubmit={this.handlesubmit}>
-            <label className="form-label">Ingrese nombre</label>
-            <br/>
-            <input onChange={this.handleName} style={{width:"400px"}} type="text" placeholder="Nombre" className="form-control text-center"/>
-            <br/>
-            <button type="submit" className="btn btn-primary">Enviar</button>
+            <h2>Ingrese un Pokemon</h2>
+            <hr/>
+            <input onChange={this.handleName} type="text"/>
+            <button type="submit" className="boton">Buscar</button>
           </form>
+          <hr />
+          <img src={this.state.img} alt="Pokemon-img"/>
         </div>
-        <img src={this.state.img} alt="Pokemon-img"/>
-      </div>
-      </div>
     );
   }
 }

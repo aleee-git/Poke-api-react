@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import {BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import {Routes, Route, Link } from "react-router-dom";
 import BuscarPoke from './Components/BuscarPoke';
 
 function App() {
@@ -13,7 +13,6 @@ function App() {
         <Route path="./Components/BuscarPoke" element={ <Buscar /> } />
         <Route path="./Components/FiltrarPoke" element={ <Filtrar /> } />
       </Routes> */}
-
 
 {/* <Router>
       <Navbar />
