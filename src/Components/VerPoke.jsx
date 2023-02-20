@@ -18,11 +18,15 @@ export default function VerPoke({pokemon}) {
     }
 
   return (
-    <div className='container lista'>
-      <div className='texto'> {onePoke.name} </div>
-      <div className='imagen'>
-      <img src={onePoke.sprites.front_default} alt="poke-imagen" />
+
+    <div className="container lista card" style={{ width: "400px", height: "300px"}}>
+      <div className="texto card-header"> {onePoke.name} </div>
+      <div className="imagen card-body">
+        <img src={onePoke.sprites.front_default} alt="poke-imagen" />
       </div>
     </div>
+
+
+
   );
 }

@@ -26,7 +26,7 @@ h2 {
   text-align: center;
 }
 
-img { max-width: 25%; }
+img { max-width: 20%; }
 
 .container {
   /* max-width: 1200px;
@@ -36,12 +36,12 @@ img { max-width: 25%; }
 }
 
 /* App */
-header { 
+.header { 
   background-color: var(--azulClaro);
   border-radius: 10px;
 }
 
-header h1 {
+.header h1 {
   padding: 25px 0;
   margin: 0;
   color: black;
@@ -106,15 +106,11 @@ hr { border: solid var(--azul);}
 
 
 /* VER */
-
 .lista {
   background-color: var(--azulClaro);
-  display: grid;
-  grid-template-columns: 50% 50%;
-  align-items: center;
-  border: 1px solid var(--azulOscuro);
-  padding: 50px;
-  max-width: 60%;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 5px;
 }
 
 .texto {
@@ -128,11 +124,9 @@ hr { border: solid var(--azul);}
   color: black;
   font-family: var(--fuente);
   font-weight: 600;
+  margin-bottom: 40px;
 }
 
-.imagen {
-  max-height: 70px;
-}
 /* VER */
 
 
