@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -8,11 +9,9 @@ export default function Header() {
       <img src="../src/Images/pika.gif" alt="Poke" />
     </div>
     <div className='container sombra principal'>
-      <ul>
-        <li>Ver Pokemones 👀</li>
-        <li>Buscar un Pokemon 🔎</li>
-        <li>Filtrar un Pokemon por Elemento 🕵️</li>
-      </ul>
+    <Link to="BuscarPoke" className='enlace'> Buscar un Pokemón 🔎 </Link>
+    <Link to="ListaPoke" className='enlace'> Ver Pokemones 👀 </Link>
+    <Link to="FiltrarPoke" className='enlace'> Filtrar Pokemón 🕵️ </Link>
     </div>
   </div>
   );
