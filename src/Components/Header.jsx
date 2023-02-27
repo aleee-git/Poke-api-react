@@ -6,7 +6,7 @@ export default function Header() {
   <div className='header'>
     <h1>Bienvenido</h1>
     <div>
-      <img src="../src/Images/pika.gif" alt="Poke" />
+      <img src="../src/Images/pika.gif" style={{maxWidth: '20%'}} alt="Poke" />
     </div>
     <div className='container sombra principal'>
     <Link to="BuscarPoke" className='enlace'> Buscar un Pokemón 🔎 </Link>

@@ -6,7 +6,7 @@ export default class BuscarPoke extends Component {
         super();
         this.state = {
             name : "",
-            img : "#",
+            img : "",
         }
     }
 
@@ -23,10 +23,17 @@ export default class BuscarPoke extends Component {
             let data = await res.json();
       
             console.log(data);
-      
+            
+            if(data.res != '') {
             this.setState ({
               img: data.sprites.front_default,
             });
+          }
+          else {
+            this.setState ({
+              img: '',
+            });
+          }
       
           }
       
@@ -40,12 +47,11 @@ export default class BuscarPoke extends Component {
       
             this.fechApi();
             event.preventDefault();
-      
-            console.log(name);
-        }
+          }
 
   render() {
     return (
+
         <div className="card container" >
           <form onSubmit={this.handlesubmit}>
             <h2>Ingrese un Pokemon</h2>
@@ -53,8 +59,9 @@ export default class BuscarPoke extends Component {
             <button type="submit" className="boton">Buscar</button>
           <hr />
           </form>
-          <img src={this.state.img} alt="Pokemon-img" className='imagen'/>
-        </div>
+          {this.state.img != '' ? <img className='poke' src={this.state.img} alt="Pokemon-img"/> : <p> Este pokemon no existe  </p> }
+
+        </div> 
     );
   }
 }

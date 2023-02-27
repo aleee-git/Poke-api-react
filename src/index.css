@@ -26,26 +26,13 @@ h2 {
   text-align: center;
 }
 
-img { max-width: 20%; }
+img { max-width: 80%; }
 
 .container {
   /* max-width: 1200px;
   width: 85%; */
   width: min(90%, 1200px);
   margin: 0 auto;
-}
-
-/* App */
-.header { 
-  background-color: var(--azulClaro);
-  border-radius: 10px;
-}
-
-.header h1 {
-  padding: 25px 0;
-  margin: 0;
-  color: black;
-  text-align: center;
 }
 
 .sombra {
@@ -64,9 +51,20 @@ img { max-width: 20%; }
   align-items: center;
   transform: translateY(5rem);
 }
-/* App */
 
+/* HEADER */
+.header { 
+  background-color: var(--azulClaro);
+  border-radius: 10px;
+  margin-bottom: 130px;
+}
 
+.header h1 {
+  padding: 25px 0;
+  margin: 0;
+  color: black;
+  text-align: center;
+}
 
 .enlace {
   cursor: pointer;
@@ -80,24 +78,44 @@ img { max-width: 20%; }
 .enlace:hover {
   color: var(--azulOscuro);
 }
+/* HEADER */
+
+/* VER */
+.lista {
+  background-color: var(--azulClaro);
+  padding: 40px;
+  margin: 10px;
+  border-radius: 10PX;
+}
+
+.texto {
+  font-family: var(--fuente);
+  font-weight: 400;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+/* VER */
 
 /* BUSCAR */
 .card {
   background-color: var(--azulClaro);
   border-radius: 10px;
-  padding: 10px;
+  padding: 45px;
   max-width: 800px;
-  margin-top: 150px;
+  margin-top: 140px;
   align-items: center;
 }
 
 .card input {
   padding: 10px;
   border: none;
-  border-radius: 5px;
   margin: 40px;
   font-family: var(--fuente);
   font-size: 20px;
+}
+
+.poke {
+  width: 40%;
 }
 
 hr { border: solid black;}
@@ -108,35 +126,13 @@ hr { border: solid black;}
   font-family: var(--fuente);
   background-color: var(--azulOscuro);
   color: white;
+  width: 100px;
   border-radius: 5px;
 }
 /* BUSCAR */
 
 
-/* VER */
-.lista {
-  background-color: var(--azulClaro);
-  padding: 40px;
-  margin-bottom: 40px;
-  margin-top: 60px;
-  border-radius: 5px;
-}
 
-.texto {
-  font-family: var(--fuente);
-  font-weight: 400;
-  font-size: 40px;
-  text-transform: uppercase;
-}
-
-.titulo {
-  color: black;
-  font-family: var(--fuente);
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
-/* VER */
 
 
 

@@ -24,7 +24,6 @@ export default function ListaPoke() {
 
   return (
     <div>
-        <h1 className='titulo'>Pokemones</h1>
         <DisplayPoke pokemons={pokemons}/>
     </div>
   );
