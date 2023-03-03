@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import DisplayPoke from './DisplayPoke';
 
-export default function ListaPoke() {
+export default function ListaPoke({selected}) {
 
     const [pokemons, setPokemons] = useState([{
         name : "Ditto",
@@ -10,7 +10,7 @@ export default function ListaPoke() {
     }]);
 
     const getPokemons = () => {
-        axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20")
+        axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=200")
         .then((respuesta) => {
             console.log(respuesta);
             setPokemons(respuesta.data.results);
@@ -24,7 +24,7 @@ export default function ListaPoke() {
 
   return (
     <div>
-        <DisplayPoke pokemons={pokemons}/>
+        <DisplayPoke pokemons={pokemons} selected={selected}/>
     </div>
   );
 }

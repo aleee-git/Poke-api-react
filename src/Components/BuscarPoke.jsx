@@ -52,16 +52,21 @@ export default class BuscarPoke extends Component {
   render() {
     return (
 
-        <div className="card container" >
+      <>      
+
+      <div className="formulario container" >
           <form onSubmit={this.handlesubmit}>
-            <h2>Ingrese un Pokemon</h2>
+            <h2>Ingrese un Pokemón</h2>
             <input onChange={this.handleName} type="text"/>
             <button type="submit" className="boton">Buscar</button>
-          <hr />
           </form>
-          {this.state.img != '' ? <img className='poke' src={this.state.img} alt="Pokemon-img"/> : <p> Este pokemon no existe  </p> }
+          <hr />
+
+          {this.state.img != '' ? <img className='poke' src={this.state.img} /> : null}
 
         </div> 
+      </>
+        
     );
   }
 }

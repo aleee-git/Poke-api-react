@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-export default function VerPoke({pokemon}) {
+export default function VerPoke({pokemon, selected}) {
 
+  const [tipo, setTipo] = useState([])
     const [onePoke, setOnePoke] = useState ({
         name : "",
         sprites : {front_default: ""}
@@ -14,17 +15,36 @@ export default function VerPoke({pokemon}) {
 
     const getPokemon = (url) => {
       axios.get(url)
-      .then((respuesta) => {setOnePoke(respuesta.data)})
+      .then((respuesta) => {
+        setOnePoke(respuesta.data)
+        setTipo(respuesta.data.types["0"].type)
+      })
     }
 
   return (
-
-  <div className='lista' style={{width: '18rem'}}>
-    <img src={onePoke.sprites.front_default} className='card-img-top'  alt="..."/>
-    <div className='card-body'>
-      <p className='card-text texto'> {onePoke.name} </p>
+  <>
+  {selected == undefined? (
+  <div className='lista'>
+    <div className="texto">
+    <p className='nombre'> {onePoke.name} </p>
+    <p> Tipo: {tipo.name} </p>
     </div>
+    <img src={onePoke.sprites.front_default} className='card-img-top'  alt="..."/>
   </div>
+  ) : (
+  selected== tipo.name? (
+  <div className='lista'>
+    <p className='nombre'> {onePoke.name} </p>
+    <p className='tipo'> {tipo.name}</p>
+    <img src={onePoke.sprites.front_default} className='card-img-top'  alt="..."/>
+  
+
+</div>
+): null
+
+)
+  }
+  </>
 
   );
 }
